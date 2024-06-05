@@ -15,6 +15,7 @@ namespace DemoSelenium.Test {
             dashboardPage = new DashboardPage(Browser.Driver);
         }
 
+        [TestCategory("smoke test")]
         [TestMethod("TC01: Login with valid username and password")]
         public void VerifyValidUser() {
 
@@ -32,6 +33,7 @@ namespace DemoSelenium.Test {
             dashboardPage.IsLabelDashboardDisplayed(timeout: 10).Should().BeTrue();
         }
 
+        [TestCategory("smoke test")]
         [TestMethod("TC02: Login with invalid username and password")]
         public void VerifyInvalidUser() {
             throw new Exception("asdasd");
